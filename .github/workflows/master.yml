@@ -4,9 +4,12 @@ on:
   pull_request:
     branches:
       - master
+      - actions-setup
+      -
   push:
     branches:
       - master
+      - actions-setup
       -
 jobs:
 
