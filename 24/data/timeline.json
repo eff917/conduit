@@ -1,0 +1,52 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "children" : [ {
+    "name" : "fv-az318-25",
+    "children" : [ {
+      "name" : "2984-MainThread",
+      "children" : [ {
+        "name" : "test_if_main_page_loads",
+        "uid" : "e028412bd2c60bea",
+        "parentUid" : "128ddfa778704e3f3489e2a7aa482351",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652739048162,
+          "stop" : 1652739090736,
+          "duration" : 42574
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_dummy[0]",
+        "uid" : "949cfc8e4eac8c18",
+        "parentUid" : "128ddfa778704e3f3489e2a7aa482351",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652739090741,
+          "stop" : 1652739097523,
+          "duration" : 6782
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "0" ]
+      }, {
+        "name" : "test_dummy[5]",
+        "uid" : "45bea1a9186f066d",
+        "parentUid" : "128ddfa778704e3f3489e2a7aa482351",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652739097527,
+          "stop" : 1652739104335,
+          "duration" : 6808
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "5" ]
+      } ],
+      "uid" : "128ddfa778704e3f3489e2a7aa482351"
+    } ],
+    "uid" : "a400c35835c461a89d2433822f146bba"
+  } ],
+  "name" : "timeline"
+}
