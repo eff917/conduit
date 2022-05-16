@@ -1,7 +1,43 @@
-.git
-.idea
-node_modules/
-src/public/js/app.js
-src/node_modules
-src/deno_dir
 
+# IDE and editor files
+#--------------------
+
+**/.idea
+**/.*.swp
+**/.vscode
+
+# OS specific junk
+#-----------------
+**/.DS_Store
+**/desktop.ini
+**/thumbs.db
+**/Thumbs.db
+
+# Python and related tools
+#-------------------------
+**/__pycache__/
+**/dist/*
+**/*.pyc
+**/*.egg-info
+**/*/.eggs/
+**/*.pytest_cache
+**/.coverage
+**/coverage.xml
+**/.venv
+**/build/*
+**/htmlcov
+**/.env
+
+# Other global stuff
+--------------------
+#ingore all binaries
+**/*.dll
+**/*.exe
+**/*.so
+**/*.o
+
+# ignore git merge origs
+**/*.orig
+
+# ignore allure-reports
+/allure-results
