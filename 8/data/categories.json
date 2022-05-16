@@ -1,0 +1,26 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_RESET\n  (Session info: headless chrome=101.0.4951.54)",
+      "children" : [ {
+        "name" : "test_dummy2",
+        "uid" : "b9a99bf35a490478",
+        "parentUid" : "53a63bca54f63ee08abf641955521343",
+        "status" : "broken",
+        "time" : {
+          "start" : 1652707167901,
+          "stop" : 1652707168519,
+          "duration" : 618
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "53a63bca54f63ee08abf641955521343"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}

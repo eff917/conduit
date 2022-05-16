@@ -1,0 +1,95 @@
+{
+  "uid" : "d29f876c06524018",
+  "name" : "test_dummy",
+  "fullName" : "tests.test_dummy#test_dummy",
+  "historyId" : "89b0643eb3d9dd1e266feeb1026a3012",
+  "time" : {
+    "start" : 1652707162381,
+    "stop" : 1652707167899,
+    "duration" : 5518
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "76b479504fad90f7",
+      "name" : "log",
+      "source" : "76b479504fad90f7.txt",
+      "type" : "text/plain",
+      "size" : 599
+    }, {
+      "uid" : "5198a8128345afa",
+      "name" : "stderr",
+      "source" : "5198a8128345afa.txt",
+      "type" : "text/plain",
+      "size" : 418
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_dummy"
+  }, {
+    "name" : "host",
+    "value" : "fv-az249-621"
+  }, {
+    "name" : "thread",
+    "value" : "3012-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_dummy"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "1c58f03b45a991fc",
+        "reportUrl" : "https://eff917.github.io/conduit/7//#testresult/1c58f03b45a991fc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652706661307,
+          "stop" : 1652706668774,
+          "duration" : 7467
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "d29f876c06524018.json",
+  "parameterValues" : [ ]
+}
