@@ -1,7 +1,6 @@
 """
 Dummy module for pytest, needed to set up github actions
 """
-import traceback
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
@@ -25,7 +24,7 @@ def test_dummy():
         )
         browser.get(URL)
     except Exception as ex:  # pylint: disable=W0703
-        print(traceback.format_exc(ex))
+        print(ex)
     return True
 
 
@@ -39,5 +38,5 @@ def test_dummy2():
         )
         browser.get(URL)
     except Exception as ex:  # pylint: disable=W0703
-        print(traceback.format_exc(ex))
+        print(ex)
     return True
