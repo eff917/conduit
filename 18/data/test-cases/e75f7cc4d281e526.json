@@ -1,0 +1,128 @@
+{
+  "uid" : "e75f7cc4d281e526",
+  "name" : "test_dummy[40]",
+  "fullName" : "tests.test_dummy#test_dummy",
+  "historyId" : "dfdc477ace3a61685092b8af80590ff1",
+  "time" : {
+    "start" : 1652718398868,
+    "stop" : 1652718405452,
+    "duration" : 6584
+  },
+  "description" : "\n    Dummy test 1\n    ",
+  "descriptionHtml" : "<pre><code>Dummy test 1\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "\n    Dummy test 1\n    ",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "open conduit and take screenshot after 40 seconds",
+      "time" : {
+        "start" : 1652718398868,
+        "stop" : 1652718400447,
+        "duration" : 1579
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "e70b86a1f74c21d6",
+        "name" : "Dummy_test_40",
+        "source" : "e70b86a1f74c21d6.png",
+        "type" : "image/png",
+        "size" : 0
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "b0c98c3f71deab6d",
+      "name" : "log",
+      "source" : "b0c98c3f71deab6d.txt",
+      "type" : "text/plain",
+      "size" : 366
+    }, {
+      "uid" : "bfb715b7a3f67ea7",
+      "name" : "stdout",
+      "source" : "bfb715b7a3f67ea7.txt",
+      "type" : "text/plain",
+      "size" : 46
+    }, {
+      "uid" : "b357cd2e1c94e9e8",
+      "name" : "stderr",
+      "source" : "b357cd2e1c94e9e8.txt",
+      "type" : "text/plain",
+      "size" : 237
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 4,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_dummy"
+  }, {
+    "name" : "host",
+    "value" : "fv-az38-315"
+  }, {
+    "name" : "thread",
+    "value" : "3046-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_dummy"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "time",
+    "value" : "40"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "665bbde3ca710a88",
+        "reportUrl" : "https://eff917.github.io/conduit/17//#testresult/665bbde3ca710a88",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652718109251,
+          "stop" : 1652718110845,
+          "duration" : 1594
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "e75f7cc4d281e526.json",
+  "parameterValues" : [ "40" ]
+}
