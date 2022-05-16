@@ -1,0 +1,22 @@
+{
+  "89b0643eb3d9dd1e266feeb1026a3012" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "1c58f03b45a991fc",
+      "reportUrl" : "https://eff917.github.io/conduit/7//#testresult/1c58f03b45a991fc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652706661307,
+        "stop" : 1652706668774,
+        "duration" : 7467
+      }
+    } ]
+  }
+}
