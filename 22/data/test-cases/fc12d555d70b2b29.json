@@ -1,0 +1,99 @@
+{
+  "uid" : "fc12d555d70b2b29",
+  "name" : "test_if_main_page_loads",
+  "fullName" : "tests.test_dummy#test_if_main_page_loads",
+  "historyId" : "d0e972bd941169d23f3754fde5d4e4a0",
+  "time" : {
+    "start" : 1652736734862,
+    "stop" : 1652736736937,
+    "duration" : 2075
+  },
+  "description" : "\n    Wait for docker container to load\n    ",
+  "descriptionHtml" : "<pre><code>Wait for docker container to load\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "\n    Wait for docker container to load\n    ",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "open conduit and take screenshot after main page loaded",
+      "time" : {
+        "start" : 1652736734862,
+        "stop" : 1652736736937,
+        "duration" : 2075
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "e701a95b2c8c9feb",
+      "name" : "log",
+      "source" : "e701a95b2c8c9feb.txt",
+      "type" : "text/plain",
+      "size" : 599
+    }, {
+      "uid" : "be30cc7109f00c05",
+      "name" : "stdout",
+      "source" : "be30cc7109f00c05.txt",
+      "type" : "text/plain",
+      "size" : 151
+    }, {
+      "uid" : "79d41d19c3b0d493",
+      "name" : "stderr",
+      "source" : "79d41d19c3b0d493.txt",
+      "type" : "text/plain",
+      "size" : 418
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_dummy"
+  }, {
+    "name" : "host",
+    "value" : "fv-az130-313"
+  }, {
+    "name" : "thread",
+    "value" : "3045-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_dummy"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "fc12d555d70b2b29.json",
+  "parameterValues" : [ ]
+}
