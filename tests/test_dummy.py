@@ -9,6 +9,8 @@ import selenium
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 
 URL = "http://localhost:1667/"
@@ -29,8 +31,7 @@ def test_if_main_page_loads():
                 ChromeDriverManager().install(), options=chrome_options
             )
             driver.get(URL)
-            wait = WebDriverWait(driver, 30, 5)
-            element = wait.until(driver.find_element_by_class_name("logo-font"))
+            element = WebDriverWait(driver, 30, 5).until(EC.presence_of_element_located((By.CLASS_NAME, "logo-font")))
             allure.attach(
                 driver.get_screenshot_as_png(),
                 name=f"main_page",
