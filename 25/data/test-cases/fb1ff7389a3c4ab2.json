@@ -1,0 +1,149 @@
+{
+  "uid" : "fb1ff7389a3c4ab2",
+  "name" : "test_dummy[5]",
+  "fullName" : "tests.test_dummy#test_dummy",
+  "historyId" : "f39cb2086b35fa6e935a6e088566fa94",
+  "time" : {
+    "start" : 1652739959876,
+    "stop" : 1652739966645,
+    "duration" : 6769
+  },
+  "description" : "\n    Dummy test 1\n    ",
+  "descriptionHtml" : "<pre><code>Dummy test 1\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "\n    Dummy test 1\n    ",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "open conduit and take screenshot after 5 seconds",
+      "time" : {
+        "start" : 1652739959876,
+        "stop" : 1652739961640,
+        "duration" : 1764
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "b9824374ca4fe45d",
+        "name" : "Dummy_test_5",
+        "source" : "b9824374ca4fe45d.png",
+        "type" : "image/png",
+        "size" : 50311
+      } ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "4eace485bf9cce77",
+      "name" : "log",
+      "source" : "4eace485bf9cce77.txt",
+      "type" : "text/plain",
+      "size" : 366
+    }, {
+      "uid" : "ab5607e234a018b0",
+      "name" : "stderr",
+      "source" : "ab5607e234a018b0.txt",
+      "type" : "text/plain",
+      "size" : 237
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 1,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_dummy"
+  }, {
+    "name" : "host",
+    "value" : "fv-az123-76"
+  }, {
+    "name" : "thread",
+    "value" : "2889-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_dummy"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "time",
+    "value" : "5"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 5,
+        "unknown" : 0,
+        "total" : 5
+      },
+      "items" : [ {
+        "uid" : "45bea1a9186f066d",
+        "reportUrl" : "https://eff917.github.io/conduit/24//#testresult/45bea1a9186f066d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652739097527,
+          "stop" : 1652739104335,
+          "duration" : 6808
+        }
+      }, {
+        "uid" : "6aad72bcb89820eb",
+        "reportUrl" : "https://eff917.github.io/conduit/23//#testresult/6aad72bcb89820eb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652737421094,
+          "stop" : 1652737427951,
+          "duration" : 6857
+        }
+      }, {
+        "uid" : "e52e844614b8272c",
+        "reportUrl" : "https://eff917.github.io/conduit/22//#testresult/e52e844614b8272c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652736742617,
+          "stop" : 1652736749318,
+          "duration" : 6701
+        }
+      }, {
+        "uid" : "e2effa17dc1243bb",
+        "reportUrl" : "https://eff917.github.io/conduit/21//#testresult/e2effa17dc1243bb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652719388885,
+          "stop" : 1652719395565,
+          "duration" : 6680
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "fb1ff7389a3c4ab2.json",
+  "parameterValues" : [ "5" ]
+}
