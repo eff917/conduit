@@ -16,13 +16,11 @@ jobs:
         python-version:
           - 3.10.4
     steps:
-      - uses: actions/checkout@v2
+      - name: Check out local repository
+        uses: actions/checkout@v2
 
-      - run: docker compose up -d
-
-      - name: Sleep until conduit starts
-        run: sleep 60
-        shell: bash
+      - name: Start conduit app
+        run: docker compose up -d
 
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
