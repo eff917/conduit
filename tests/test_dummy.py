@@ -18,6 +18,7 @@ chrome_options = Options()
 chrome_options.add_argument("--headless")
 chrome_options.add_argument(f"--window-size={WINDOW_SIZE}")
 
+# conduit start after ~30seconds
 @pytest.mark.parametrize("time", range(0,61,5))
 def test_dummy(time):
     """
