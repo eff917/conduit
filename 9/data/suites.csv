@@ -1,0 +1,3 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon May 16 13:25:15 GMT 2022","Mon May 16 13:25:17 GMT 2022","2341","tests","test_dummy","","","","test_dummy",""
+"passed","Mon May 16 13:25:17 GMT 2022","Mon May 16 13:25:19 GMT 2022","1720","tests","test_dummy","","","","test_dummy2",""
