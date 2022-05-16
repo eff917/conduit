@@ -1,0 +1,108 @@
+{
+  "uid" : "c133065b43a52222",
+  "name" : "test_dummy[20]",
+  "fullName" : "tests.test_dummy#test_dummy",
+  "historyId" : "4438d2dc41a4f56aab80912a03227014",
+  "time" : {
+    "start" : 1652718102748,
+    "stop" : 1652718104341,
+    "duration" : 1593
+  },
+  "description" : "\n    Dummy test 1\n    ",
+  "descriptionHtml" : "<pre><code>Dummy test 1\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "\n    Dummy test 1\n    ",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "open conduit and take screenshot after 20 seconds",
+      "time" : {
+        "start" : 1652718102748,
+        "stop" : 1652718104340,
+        "duration" : 1592
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "f7a41869298f0d02",
+        "name" : "Dummy_test_20",
+        "source" : "f7a41869298f0d02.png",
+        "type" : "image/png",
+        "size" : 0
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "b4a0404fa3b5594d",
+      "name" : "log",
+      "source" : "b4a0404fa3b5594d.txt",
+      "type" : "text/plain",
+      "size" : 366
+    }, {
+      "uid" : "b2470d89d18fd60e",
+      "name" : "stdout",
+      "source" : "b2470d89d18fd60e.txt",
+      "type" : "text/plain",
+      "size" : 46
+    }, {
+      "uid" : "ffe562d5fee5ce08",
+      "name" : "stderr",
+      "source" : "ffe562d5fee5ce08.txt",
+      "type" : "text/plain",
+      "size" : 237
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 4,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_dummy"
+  }, {
+    "name" : "host",
+    "value" : "fv-az121-431"
+  }, {
+    "name" : "thread",
+    "value" : "3047-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_dummy"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "time",
+    "value" : "20"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "c133065b43a52222.json",
+  "parameterValues" : [ "20" ]
+}
