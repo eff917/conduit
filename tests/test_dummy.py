@@ -31,7 +31,7 @@ def test_if_main_page_loads():
                 ChromeDriverManager().install(), options=chrome_options
             )
             driver.get(URL)
-            element = WebDriverWait(driver, 30, 5).until(EC.presence_of_element_located((By.CLASS_NAME, "logo-font")))
+            element = WebDriverWait(driver, 70, 5).until(EC.presence_of_element_located((By.CLASS_NAME, "logo-font")))
             allure.attach(
                 driver.get_screenshot_as_png(),
                 name=f"main_page",
