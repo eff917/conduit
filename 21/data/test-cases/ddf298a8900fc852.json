@@ -1,0 +1,102 @@
+{
+  "uid" : "ddf298a8900fc852",
+  "name" : "test_dummy[10]",
+  "fullName" : "tests.test_dummy#test_dummy",
+  "historyId" : "a9850ab8bb74b1effdc9be0f42115ea2",
+  "time" : {
+    "start" : 1652719395569,
+    "stop" : 1652719402293,
+    "duration" : 6724
+  },
+  "description" : "\n    Dummy test 1\n    ",
+  "descriptionHtml" : "<pre><code>Dummy test 1\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "\n    Dummy test 1\n    ",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "open conduit and take screenshot after 10 seconds",
+      "time" : {
+        "start" : 1652719395569,
+        "stop" : 1652719397288,
+        "duration" : 1719
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "ea3567515b28e50d",
+        "name" : "Dummy_test_10",
+        "source" : "ea3567515b28e50d.png",
+        "type" : "image/png",
+        "size" : 10592
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "fb40adbd1edbb0f7",
+      "name" : "log",
+      "source" : "fb40adbd1edbb0f7.txt",
+      "type" : "text/plain",
+      "size" : 366
+    }, {
+      "uid" : "4bd83c5724682438",
+      "name" : "stderr",
+      "source" : "4bd83c5724682438.txt",
+      "type" : "text/plain",
+      "size" : 237
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_dummy"
+  }, {
+    "name" : "host",
+    "value" : "fv-az206-34"
+  }, {
+    "name" : "thread",
+    "value" : "3262-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_dummy"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "time",
+    "value" : "10"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ddf298a8900fc852.json",
+  "parameterValues" : [ "10" ]
+}
