@@ -1,0 +1,119 @@
+{
+  "uid" : "28519f48adef800f",
+  "name" : "test_if_main_page_loads",
+  "fullName" : "tests.test_dummy#test_if_main_page_loads",
+  "historyId" : "d0e972bd941169d23f3754fde5d4e4a0",
+  "time" : {
+    "start" : 1652737381913,
+    "stop" : 1652737414341,
+    "duration" : 32428
+  },
+  "description" : "\n    Wait for docker container to load\n    ",
+  "descriptionHtml" : "<pre><code>Wait for docker container to load\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "\n    Wait for docker container to load\n    ",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "open conduit and take screenshot after main page loaded",
+      "time" : {
+        "start" : 1652737381913,
+        "stop" : 1652737414340,
+        "duration" : 32427
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ {
+      "uid" : "34583255493006c8",
+      "name" : "log",
+      "source" : "34583255493006c8.txt",
+      "type" : "text/plain",
+      "size" : 599
+    }, {
+      "uid" : "81215a2093717592",
+      "name" : "stdout",
+      "source" : "81215a2093717592.txt",
+      "type" : "text/plain",
+      "size" : 11
+    }, {
+      "uid" : "a28398d90f713169",
+      "name" : "stderr",
+      "source" : "a28398d90f713169.txt",
+      "type" : "text/plain",
+      "size" : 418
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true,
+    "stepsCount" : 1
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_dummy"
+  }, {
+    "name" : "host",
+    "value" : "fv-az91-347"
+  }, {
+    "name" : "thread",
+    "value" : "2873-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_dummy"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "fc12d555d70b2b29",
+        "reportUrl" : "https://eff917.github.io/conduit/22//#testresult/fc12d555d70b2b29",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652736734862,
+          "stop" : 1652736736937,
+          "duration" : 2075
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "28519f48adef800f.json",
+  "parameterValues" : [ ]
+}
