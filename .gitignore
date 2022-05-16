@@ -1,3 +1,8 @@
+# JS stuff
+#----------
+
+node_modules
+/src/public/js/app.js
 
 # IDE and editor files
 #--------------------
