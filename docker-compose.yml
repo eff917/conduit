@@ -13,6 +13,11 @@ services:
       - POSTGRES_PASSWORD=userpassword
     networks:
       - drash-app-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
   drash:
     container_name: realworld_drash
@@ -24,6 +29,16 @@ services:
       - "1667:1667"
     networks:
       - drash-app-network
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://drash:1667/"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 8
+      start_period: 40s
+
 
 networks:
   drash-app-network:
