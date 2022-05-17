@@ -7,6 +7,7 @@ from allure_commons.types import AttachmentType
 import pytest
 import selenium
 from selenium import webdriver
+from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -31,7 +32,7 @@ def test_if_main_page_loads():
                 ChromeDriverManager().install(), options=chrome_options
             )
             driver.get(URL)
-            element = WebDriverWait(driver, 120, 5).until(
+            element = WebDriverWait(driver, timeout=120, poll_frequency=5, ignored_exceptions=[TimeoutException]).until(
                 EC.presence_of_element_located((By.CLASS_NAME, "logo-font"))
             )
             allure.attach(
