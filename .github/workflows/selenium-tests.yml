@@ -15,8 +15,9 @@ jobs:
       - name: Check out local repository
         uses: actions/checkout@v3
 
+      # start conduip app services, and wait for then to become healthy
       - name: Start conduit app
-        run: docker compose up -d
+        run: docker compose up --wait
 
       # include other steps to give conduit container time to start
       - name: Get Allure history
