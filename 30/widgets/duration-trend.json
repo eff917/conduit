@@ -3,6 +3,13 @@
   "reportUrl" : "https://eff917.github.io/conduit/30/",
   "reportName" : "Allure Report with history",
   "data" : {
+    "duration" : 136212
+  }
+}, {
+  "buildOrder" : 30,
+  "reportUrl" : "https://eff917.github.io/conduit/30/",
+  "reportName" : "Allure Report with history",
+  "data" : {
     "duration" : 136564
   }
 }, {
