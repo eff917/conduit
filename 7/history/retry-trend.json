@@ -1,9 +1,0 @@
-[ {
-  "buildOrder" : 7,
-  "reportUrl" : "https://eff917.github.io/conduit/7/",
-  "reportName" : "Allure Report with history",
-  "data" : {
-    "run" : 1,
-    "retry" : 0
-  }
-} ]
