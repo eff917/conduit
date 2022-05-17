@@ -1,0 +1,10 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue May 17 09:06:28 GMT 2022","Tue May 17 09:06:30 GMT 2022","2444","tests","test_dummy","","","","test_if_main_page_loads","
+    Wait for docker container to load
+    "
+"passed","Tue May 17 09:06:37 GMT 2022","Tue May 17 09:06:44 GMT 2022","6777","tests","test_dummy","","","","test_dummy[5]","
+    Dummy test 1
+    "
+"passed","Tue May 17 09:06:30 GMT 2022","Tue May 17 09:06:37 GMT 2022","6823","tests","test_dummy","","","","test_dummy[0]","
+    Dummy test 1
+    "
