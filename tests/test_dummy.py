@@ -21,7 +21,7 @@ chrome_options = Options()
 chrome_options.add_argument("--headless")
 chrome_options.add_argument(f"--window-size={WINDOW_SIZE}")
 
-@pytest.mark.skip(reason="fluent wait always runs onto TimeoutException")
+# @pytest.mark.skip(reason="fluent wait always runs onto TimeoutException")
 def test_if_main_page_loads():
     """
     Wait for docker container to load
@@ -32,6 +32,11 @@ def test_if_main_page_loads():
                 ChromeDriverManager().install(), options=chrome_options
             )
             driver.get(URL)
+            allure.attach(
+                driver.get_screenshot_as_png(),
+                name="Screenshot_before_wait",
+                attachment_type=AttachmentType.PNG,
+            )
             element = WebDriverWait(driver, timeout=120, poll_frequency=5, ignored_exceptions=[TimeoutException]).until(
                 EC.presence_of_element_located((By.CLASS_NAME, "logo-font"))
             )
@@ -40,6 +45,13 @@ def test_if_main_page_loads():
                 name=f"main_page",
                 attachment_type=AttachmentType.PNG,
             )
+        except:
+            allure.attach(
+                driver.get_screenshot_as_png(),
+                name="Screenshot_after_wait_exception",
+                attachment_type=AttachmentType.PNG,
+            )
+
         finally:
             driver.quit()
 
@@ -52,18 +64,18 @@ def test_dummy(time):
     """
     with allure.step(f"open conduit and take screenshot after {time} seconds"):
         try:
-            browser = webdriver.Chrome(
+            driver = webdriver.Chrome(
                 ChromeDriverManager().install(), options=chrome_options
             )
-            browser.get(URL)
+            driver.get(URL)
             allure.attach(
-                browser.get_screenshot_as_png(),
+                driver.get_screenshot_as_png(),
                 name=f"Dummy_test_{time}",
                 attachment_type=AttachmentType.PNG,
             )
         except Exception as ex:  # pylint: disable=W0703
             print(ex)
         finally:
-            browser.quit()
+            driver.quit()
     sleep(5)
     return True
