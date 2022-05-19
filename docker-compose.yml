@@ -33,7 +33,7 @@ services:
       postgres:
         condition: service_healthy
     healthcheck:
-      test: curl --fail http://drash:1667/ || exit 1
+      test: ["CMD", "curl", "-f", "http://drash:1667/"]
       interval: 10s
       timeout: 10s
       retries: 8
