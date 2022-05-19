@@ -31,6 +31,8 @@ def test_if_main_page_loads():
             ChromeDriverManager().install(), options=chrome_options
         )
         driver.get(URL)
+        # test if immediate refresh solves the problem
+        driver.refresh()
         for i in range(4):
             try:
                 allure.attach(
@@ -43,18 +45,18 @@ def test_if_main_page_loads():
                 )
                 allure.attach(
                     driver.get_screenshot_as_png(),
-                    name=f"Screenshot_after_waint_{i}",
+                    name=f"Screenshot_after_wait_{i}",
                     attachment_type=AttachmentType.PNG,
                 )
                 # if the fluent wait doesn't raise an exception, break the cycle, else try again.
                 break
             except:
-                driver.refresh()
                 allure.attach(
                     driver.get_screenshot_as_png(),
                     name=f"Screenshot_after_wait_exception_{i}",
                     attachment_type=AttachmentType.PNG,
                 )
+                driver.refresh()
 
         driver.quit()
 
