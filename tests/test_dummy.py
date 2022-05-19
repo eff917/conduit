@@ -27,33 +27,36 @@ def test_if_main_page_loads():
     Wait for docker container to load
     """
     with allure.step(f"open conduit and take screenshot after main page loaded"):
-        try:
-            driver = webdriver.Chrome(
-                ChromeDriverManager().install(), options=chrome_options
-            )
-            driver.get(URL)
-            allure.attach(
-                driver.get_screenshot_as_png(),
-                name="Screenshot_before_wait",
-                attachment_type=AttachmentType.PNG,
-            )
-            element = WebDriverWait(driver, timeout=120, poll_frequency=5, ignored_exceptions=[TimeoutException]).until(
-                EC.presence_of_element_located((By.CLASS_NAME, "logo-font"))
-            )
-            allure.attach(
-                driver.get_screenshot_as_png(),
-                name=f"main_page",
-                attachment_type=AttachmentType.PNG,
-            )
-        except:
-            allure.attach(
-                driver.get_screenshot_as_png(),
-                name="Screenshot_after_wait_exception",
-                attachment_type=AttachmentType.PNG,
-            )
+        driver = webdriver.Chrome(
+            ChromeDriverManager().install(), options=chrome_options
+        )
+        driver.get(URL)
+        for i in range(4):
+            try:
+                allure.attach(
+                    driver.get_screenshot_as_png(),
+                    name=f"Screenshot_before_wait_{i}",
+                    attachment_type=AttachmentType.PNG,
+                )
+                element = WebDriverWait(driver, timeout=5, poll_frequency=1, ignored_exceptions=[TimeoutException]).until(
+                    EC.presence_of_element_located((By.CLASS_NAME, "logo-font"))
+                )
+                allure.attach(
+                    driver.get_screenshot_as_png(),
+                    name=f"Screenshot_after_waint_{i}",
+                    attachment_type=AttachmentType.PNG,
+                )
+                # if the fluent wait doesn't raise an exception, break the cycle, else try again.
+                break
+            except:
+                driver.refresh()
+                allure.attach(
+                    driver.get_screenshot_as_png(),
+                    name=f"Screenshot_after_wait_exception_{i}",
+                    attachment_type=AttachmentType.PNG,
+                )
 
-        finally:
-            driver.quit()
+        driver.quit()
 
 
 # conduit starts after 20-30seconds
