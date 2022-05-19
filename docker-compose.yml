@@ -33,7 +33,10 @@ services:
       postgres:
         condition: service_healthy
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://drash:1667/"]
+      # exit code must be 0 or 1
+      #test: curl --fail http://drash:1667/ || exit 1
+      # test returnd page's content length
+      test: curl -sD - -o /dev/null http://localhost:1667/ | grep 'content-length' | cut -d\  -f2 | tr -d '\r' | xargs -I % test % -eq 1186 || exit 1
       interval: 10s
       timeout: 10s
       retries: 8
