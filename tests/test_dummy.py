@@ -22,18 +22,20 @@ chrome_options.add_argument("--headless")
 chrome_options.add_argument(f"--window-size={WINDOW_SIZE}")
 
 # @pytest.mark.skip(reason="fluent wait always runs onto TimeoutException")
-def test_if_main_page_loads():
+def test_wai_for_main_page_loads():
     """
     Wait for docker container to load
     """
     with allure.step(f"open conduit and take screenshot after main page loaded"):
+        page_loaded_successfully = False
         driver = webdriver.Chrome(
             ChromeDriverManager().install(), options=chrome_options
         )
         driver.get(URL)
         # test if immediate refresh solves the problem
         driver.refresh()
-        for i in range(4):
+        i = 1
+        while not page_loaded_successfully:
             try:
                 allure.attach(
                     driver.get_screenshot_as_png(),
@@ -49,7 +51,7 @@ def test_if_main_page_loads():
                     attachment_type=AttachmentType.PNG,
                 )
                 # if the fluent wait doesn't raise an exception, break the cycle, else try again.
-                break
+                page_loaded_successfully = True
             except:
                 allure.attach(
                     driver.get_screenshot_as_png(),
@@ -57,6 +59,7 @@ def test_if_main_page_loads():
                     attachment_type=AttachmentType.PNG,
                 )
                 driver.refresh()
+                i += 1
 
         driver.quit()
 
