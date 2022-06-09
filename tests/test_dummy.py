@@ -75,8 +75,8 @@ def test_login(driver):
             login_email_field = driver.find_element_by_xpath('//input[@placeholder="Email"]')
             login_password_field = driver.find_element_by_xpath('//input[@placeholder="Password"]')
             login_button = driver.find_element_by_xpath('//button[contains(text(), "Sign in")]')
-            login_email_field.sendkeys("user32@hotmail.com")
-            login_password_field.sendkeys("Userpass1")
+            login_email_field.send_keys("user32@hotmail.com")
+            login_password_field.send_keys("Userpass1")
             allure.attach(
                 driver.get_screenshot_as_png(),
                 name=f"login_page_after_fill",
