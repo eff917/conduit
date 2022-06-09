@@ -21,50 +21,51 @@ chrome_options = Options()
 chrome_options.add_argument("--headless")
 chrome_options.add_argument(f"--window-size={WINDOW_SIZE}")
 
-def setup(module):
+@pytest.fixture(autouse=True, scope='module')
+def driver():
         driver = webdriver.Chrome(
             ChromeDriverManager().install(), options=chrome_options
         )
         yield driver
         driver.quit()
 
-def test_wait_for_main_page_load(self):
+def test_wait_for_main_page_load(driver):
     """
     Wait for docker container to load
     """
-    self.driver.get(URL)
+    driver.get(URL)
     with allure.step(f"open conduit and take screenshot after main page loaded"):
         page_loaded_successfully = False
         # test if immediate refresh solves the problem
-        self.driver.refresh()
+        driver.refresh()
         i = 1
         while not page_loaded_successfully:
             try:
-                element = WebDriverWait(self.driver, timeout=5, poll_frequency=1).until(
+                element = WebDriverWait(driver, timeout=5, poll_frequency=1).until(
                     EC.presence_of_element_located((By.CLASS_NAME, "logo-font"))
                 )
                 allure.attach(
-                    self.driver.get_screenshot_as_png(),
+                    driver.get_screenshot_as_png(),
                     name=f"Screenshot_after_wait_{i}",
                     attachment_type=AttachmentType.PNG,
                 )
                 # if the fluent wait doesn't raise an exception, break the cycle, else try again.
                 page_loaded_successfully = True
             except TimeoutException:
-                self.driver.refresh()
+                driver.refresh()
                 i += 1
 
 
 # conduit starts after 20-30seconds
-def test_login(self):
+def test_login(driver):
     """
     Dummy test 1
     """
     with allure.step(f"test login"):
         try:
-            self.driver.get(URL)
+            driver.get(URL)
             allure.attach(
-                self.driver.get_screenshot_as_png(),
+                driver.get_screenshot_as_png(),
                 name=f"Dummy_test",
                 attachment_type=AttachmentType.PNG,
             )
