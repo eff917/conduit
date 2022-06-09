@@ -21,7 +21,7 @@ chrome_options = Options()
 chrome_options.add_argument("--headless")
 chrome_options.add_argument(f"--window-size={WINDOW_SIZE}")
 
-def setup():
+def setup(module):
         driver = webdriver.Chrome(
             ChromeDriverManager().install(), options=chrome_options
         )
