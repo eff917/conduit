@@ -2,11 +2,7 @@ name: selenium-tests
 on:
   push:
     branches:
-      - actions-setup
-      - master
-  pull_request:
-    branches:
-      - master
+      - '!gh-pages'
 
 jobs:
   conduit-selenium-test:
