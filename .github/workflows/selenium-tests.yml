@@ -1,8 +1,8 @@
 name: selenium-tests
 on:
   push:
-    branches:
-      - '!gh-pages'
+    branches-ignore:
+      - 'gh-pages'
 
 jobs:
   conduit-selenium-test:
