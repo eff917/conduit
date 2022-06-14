@@ -11,6 +11,7 @@ pytest = "^7.1.2"
 allure-pytest = "^2.9.45"
 webdriver-manager = "^3.5.4"
 pylint = "^2.13.9"
+pytest-dependency = "^0.5.1"
 
 [tool.pytest.ini_options]
 testpaths = [
