@@ -2,6 +2,7 @@
 Test conduit app signup
 """
 
+from time import sleep
 import allure
 import pytest
 from .utils.fixtures import driver
@@ -9,29 +10,37 @@ from .utils.allure_wrappers import take_screenshot
 
 URL = "http://localhost:1667/"
 
-def test_invalid_login(driver):
+@pytest.mark.parametrize(
+    "username, email, password, expected_message",
+    [
+        ("invalidmail", "invalidmail", "Userpass1", "Email must be a valid email."),
+        ("", "empty@username.com", "Userpass1", "Username field required."),
+        ("emptymail", "", "Userpass1", "Email field required."),
+        ("emptypw", "user32@example.com", "", "Password field required."),
+        ("", "", "", "Username field required.")
+    ]
+)
+def test_invalid_signup(driver, username, email, password, expected_message):
     """
-    Sugnup test
+    Signup test
     """
-    with allure.step(f"test login"):
-        try:
-            driver.get(URL)
-            signup_link = driver.find_element_by_xpath('//a[@href="#/register"]')
-            signup_link.click()
-            take_screenshot(driver, "signup_page")
-            signup_username_field = driver.find_element_by_xpath('//input[@placeholder="Username"]')
-            signup_email_field = driver.find_element_by_xpath('//input[@placeholder="Email"]')
-            signup_password_field = driver.find_element_by_xpath('//input[@placeholder="Password"]')
-            signup_button = driver.find_element_by_xpath('//button[contains(text(), "Sign up")]')
+    with allure.step("test signup"):
+        driver.get(URL)
+        signup_link = driver.find_element_by_xpath('//a[@href="#/register"]')
+        signup_link.click()
+        take_screenshot(driver, "signup_page")
+        signup_username_field = driver.find_element_by_xpath('//input[@placeholder="Username"]')
+        signup_email_field = driver.find_element_by_xpath('//input[@placeholder="Email"]')
+        signup_password_field = driver.find_element_by_xpath('//input[@placeholder="Password"]')
+        signup_button = driver.find_element_by_xpath('//button[contains(text(), "Sign up")]')
 
-            signup_username_field.send_keys("TestUser32")
-            signup_email_field.send_keys("user32@hotmail.com")
-            signup_password_field.send_keys("Userpass1")
-            take_screenshot(driver, "signup_page_after_fill")
-            signup_button.click()
-            take_screenshot(driver, "after_signup")
-            # <div class="swal-text" style="">Email must be a valid email.</div>
+        signup_username_field.send_keys(username)
+        signup_email_field.send_keys(email)
+        signup_password_field.send_keys(password)
+        take_screenshot(driver, "signup_page_after_fill")
+        signup_button.click()
+        sleep(1)
+        take_screenshot(driver, "after_signup")
+        error_message = driver.find_element_by_xpath('//div[@class="swal-text"]')
+        assert error_message.text == expected_message
 
-        except Exception as ex:  # pylint: disable=W0703
-            print(ex)
-    return True

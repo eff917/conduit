@@ -2,6 +2,7 @@
 Test conduit app login
 """
 
+from time import sleep
 import allure
 import pytest
 from .utils.fixtures import driver
@@ -12,6 +13,10 @@ URL = "http://localhost:1667/"
 @pytest.mark.parametrize(
     "email, password, expected_message",
     [
+        ("", "", "Email field required."),
+        ("", "asdf", "Email field required."),
+        ("testuser1@example.com", "", "Password field required."),
+        ("testuser1@example.com", "asdf", "Invalid user credentials."),
         ("invalidmail", "Userpass1", "Email must be a valid email."),
         ("user32@hotmail.com", "Userpass1", "Invalid user credentials."),
     ]
@@ -32,8 +37,8 @@ def test_invalid_login(driver, email, password, expected_message):
         login_password_field.send_keys(password)
         take_screenshot(driver, "login_page_after_fill")
         login_button.click()
+        # sleep one second to wait for animation to end
+        sleep(1)
         take_screenshot(driver, "after_login")
-        # TODO create assert for error messages
-        # <div class="swal-text" style="">Email must be a valid email.</div>
         error_message = driver.find_element_by_xpath('//div[@class="swal-text"]')
         assert error_message.text == expected_message
