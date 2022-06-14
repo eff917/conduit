@@ -1,0 +1,10 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Jun 14 08:15:21 GMT 2022","Tue Jun 14 08:15:37 GMT 2022","15861","tests","test_01_main_page","","","","test_wait_for_main_page_load","
+    Wait for docker container to load
+    "
+"passed","Tue Jun 14 08:15:41 GMT 2022","Tue Jun 14 08:15:42 GMT 2022","1050","tests","test_03_signup","","","","test_invalid_login","
+    Sugnup test
+    "
+"passed","Tue Jun 14 08:15:38 GMT 2022","Tue Jun 14 08:15:39 GMT 2022","1041","tests","test_02_login","","","","test_invalid_login","
+    Test invalid login
+    "
