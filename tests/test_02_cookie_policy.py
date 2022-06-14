@@ -5,6 +5,10 @@ from .utils.allure_wrappers import take_screenshot
 URL = "http://localhost:1667/"
 
 def test_learn_more_link(driver):
+    """
+    Test Learn more... link on cookie policy bar
+    """
+
     driver.delete_all_cookies()
     driver.get(URL)
     learn_more_link = driver.find_element_by_xpath('//a[@href="https://cookiesandyou.com/"]')
@@ -18,6 +22,9 @@ def test_learn_more_link(driver):
     assert 'What are cookies? | Cookies & You' in tab_titles
 
 def test_decline_cookie_policy(driver):
+    """
+    Test decline button on cookie policy bar
+    """
     driver.delete_all_cookies()
     driver.get(URL)
     decline_button = driver.find_element_by_xpath('//div[contains(text(), "I decline!")]')
@@ -28,6 +35,9 @@ def test_decline_cookie_policy(driver):
     assert policy_accepted == 'decline'
 
 def test_accept_cookie_policy(driver):
+    """
+    Test accept button on cookie policy bar
+    """
     driver.delete_all_cookies()
     driver.get(URL)
     accept_button = driver.find_element_by_xpath('//div[contains(text(), "I accept!")]')
