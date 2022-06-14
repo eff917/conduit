@@ -1,34 +1,16 @@
 """
-Dummy module for pytest, needed to set up github actions
+Test main page with selenium
 """
 from time import sleep
 import allure
 from allure_commons.types import AttachmentType
-import pytest
-import selenium
-from selenium import webdriver
 from selenium.common.exceptions import TimeoutException
-from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
-from webdriver_manager.chrome import ChromeDriverManager
-
+from .utils.fixtures import driver
+from .utils.allure_wrappers import take_screenshot
 URL = "http://localhost:1667/"
-WINDOW_SIZE = "1920,1080"
-
-chrome_options = Options()
-chrome_options.add_argument("--headless")
-chrome_options.add_argument(f"--window-size={WINDOW_SIZE}")
-
-@pytest.fixture(autouse=True, scope='module')
-def driver():
-        driver = webdriver.Chrome(
-            ChromeDriverManager().install(), options=chrome_options
-        )
-
-        yield driver
-        driver.quit()
 
 def test_wait_for_main_page_load(driver):
     """
@@ -67,27 +49,15 @@ def test_login(driver):
             driver.get(URL)
             login_link = driver.find_element_by_xpath('//a[@href="#/login"]')
             login_link.click()
-            allure.attach(
-                driver.get_screenshot_as_png(),
-                name=f"login_page",
-                attachment_type=AttachmentType.PNG,
-            )
+            take_screenshot(driver, "login_page")
             login_email_field = driver.find_element_by_xpath('//input[@placeholder="Email"]')
             login_password_field = driver.find_element_by_xpath('//input[@placeholder="Password"]')
             login_button = driver.find_element_by_xpath('//button[contains(text(), "Sign in")]')
             login_email_field.send_keys("user32@hotmail.com")
             login_password_field.send_keys("Userpass1")
-            allure.attach(
-                driver.get_screenshot_as_png(),
-                name=f"login_page_after_fill",
-                attachment_type=AttachmentType.PNG,
-            )
+            take_screenshot(driver, "login_page_after_fill")
             login_button.click()
-            allure.attach(
-                driver.get_screenshot_as_png(),
-                name=f"after_login",
-                attachment_type=AttachmentType.PNG,
-            )
+            take_screenshot(driver, "after_login")
 
         except Exception as ex:  # pylint: disable=W0703
             print(ex)
