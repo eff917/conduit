@@ -50,3 +50,6 @@ def test_invalid_login(driver, email, password, expected_message):
         take_screenshot(driver, "after_login")
         error_message = driver.find_element_by_xpath('//div[@class="swal-text"]')
         assert error_message.text == expected_message
+
+def test_valid_login(driver):
+    assert True

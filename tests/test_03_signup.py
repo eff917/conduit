@@ -51,3 +51,5 @@ def test_invalid_signup(driver, username, email, password, expected_message):
         error_message = driver.find_element_by_xpath('//div[@class="swal-text"]')
         assert error_message.text == expected_message
 
+def test_valid_signup(driver):
+    assert True
