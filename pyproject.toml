@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "conduit-vizsgaremek-automated testing"
+version = "0.1.0"
+description = ""
+authors = ["Felber Péter (Eff) <effpeter@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+selenium = "3.141.0"
+pytest = "^7.1.2"
+allure-pytest = "^2.9.45"
+webdriver-manager = "^3.5.4"
+pylint = "^2.13.9"
+
+[tool.pytest.ini_options]
+testpaths = [
+    "tests"
+    ]
+addopts = "--alluredir=allure-results"
+
+[tool.poetry.dev-dependencies]
+black = {version = "^22.3.0", allow-prereleases = true}
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+

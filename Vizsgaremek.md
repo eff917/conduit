@@ -1,0 +1,1 @@
+# Automata Tesztelo Vizsgaremek leiras
