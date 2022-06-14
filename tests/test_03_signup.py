@@ -18,6 +18,13 @@ URL = "http://localhost:1667/"
         ("emptymail", "", "Userpass1", "Email field required."),
         ("emptypw", "user32@example.com", "", "Password field required."),
         ("", "", "", "Username field required.")
+    ],
+    ids = [
+        "Invalid email format",
+        "Empty username",
+        "Empty email",
+        "Empty password",
+        "All fields empty"
     ]
 )
 def test_invalid_signup(driver, username, email, password, expected_message):

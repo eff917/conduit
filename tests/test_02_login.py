@@ -19,6 +19,14 @@ URL = "http://localhost:1667/"
         ("testuser1@example.com", "asdf", "Invalid user credentials."),
         ("invalidmail", "Userpass1", "Email must be a valid email."),
         ("user32@hotmail.com", "Userpass1", "Invalid user credentials."),
+    ],
+    ids=[
+        "Empty fields",
+        "Empty email",
+        "Empty password",
+        "Invalid password",
+        "Invalid email format",
+        "Not registered email"
     ]
 )
 def test_invalid_login(driver, email, password, expected_message):
