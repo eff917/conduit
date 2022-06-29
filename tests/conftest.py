@@ -3,7 +3,7 @@ from time import sleep
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
-from constants import URL
+from .utils.constants import URL
 
 WINDOW_SIZE = "1920,1080"
 

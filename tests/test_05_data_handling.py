@@ -3,7 +3,6 @@ import pytest
 import allure
 from allure_commons.types import AttachmentType
 
-from .utils.fixtures import driver, login_logout_driver
 from .utils.allure_wrappers import take_screenshot
 from .utils.constants import URL
 

@@ -5,7 +5,6 @@ Test conduit app login
 from time import sleep
 import allure
 import pytest
-from .utils.fixtures import create_user, driver
 from .utils.allure_wrappers import take_screenshot
 from .utils.constants import URL
 
