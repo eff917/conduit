@@ -1,3 +1,0 @@
-Message: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@href="#/login"]"}
-  (Session info: headless chrome=102.0.5005.61)
-
