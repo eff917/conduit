@@ -46,3 +46,5 @@ node_modules
 
 # ignore allure-reports
 /allure-results
+# ignore file created by pytest
+article_titles.txt

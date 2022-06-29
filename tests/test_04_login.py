@@ -7,8 +7,8 @@ import allure
 import pytest
 from .utils.fixtures import create_user, driver
 from .utils.allure_wrappers import take_screenshot
+from .utils.constants import URL
 
-URL = "http://localhost:1667/"
 
 @pytest.mark.parametrize(
     "email, password, expected_message",
@@ -26,8 +26,8 @@ URL = "http://localhost:1667/"
         "Empty password",
         "Invalid password",
         "Invalid email format",
-        "Not registered email"
-    ]
+        "Not registered email",
+    ],
 )
 def test_invalid_login(driver, email, password, expected_message):
     """
@@ -38,9 +38,15 @@ def test_invalid_login(driver, email, password, expected_message):
         login_link = driver.find_element_by_xpath('//a[@href="#/login"]')
         login_link.click()
         take_screenshot(driver, "login_page")
-        login_email_field = driver.find_element_by_xpath('//input[@placeholder="Email"]')
-        login_password_field = driver.find_element_by_xpath('//input[@placeholder="Password"]')
-        login_button = driver.find_element_by_xpath('//button[contains(text(), "Sign in")]')
+        login_email_field = driver.find_element_by_xpath(
+            '//input[@placeholder="Email"]'
+        )
+        login_password_field = driver.find_element_by_xpath(
+            '//input[@placeholder="Password"]'
+        )
+        login_button = driver.find_element_by_xpath(
+            '//button[contains(text(), "Sign in")]'
+        )
         login_email_field.send_keys(email)
         login_password_field.send_keys(password)
         take_screenshot(driver, "login_page_after_fill")
@@ -55,10 +61,17 @@ def test_invalid_login(driver, email, password, expected_message):
 @pytest.mark.parametrize(
     "email, password, expected_element, expected_username",
     [
-        ("testuser1@mailinator.com", "TestUserPass1", '//a[@href="#/@testuser1/"]', 'testuser1'),
+        (
+            "testuser1@mailinator.com",
+            "TestUserPass1",
+            '//a[@href="#/@testuser1/"]',
+            "testuser1",
+        ),
     ],
 )
-def test_valid_login(driver, create_user, email, password, expected_element, expected_username):
+def test_valid_login(
+    driver, create_user, email, password, expected_element, expected_username
+):
     """
     Test valid login
     """
@@ -68,9 +81,15 @@ def test_valid_login(driver, create_user, email, password, expected_element, exp
         login_link.click()
         sleep(1)
         take_screenshot(driver, "login_page")
-        login_email_field = driver.find_element_by_xpath('//input[@placeholder="Email"]')
-        login_password_field = driver.find_element_by_xpath('//input[@placeholder="Password"]')
-        login_button = driver.find_element_by_xpath('//button[contains(text(), "Sign in")]')
+        login_email_field = driver.find_element_by_xpath(
+            '//input[@placeholder="Email"]'
+        )
+        login_password_field = driver.find_element_by_xpath(
+            '//input[@placeholder="Password"]'
+        )
+        login_button = driver.find_element_by_xpath(
+            '//button[contains(text(), "Sign in")]'
+        )
         login_email_field.send_keys(email)
         login_password_field.send_keys(password)
         take_screenshot(driver, "login_page_after_fill")

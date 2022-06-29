@@ -7,8 +7,7 @@ import allure
 import pytest
 from .utils.fixtures import driver
 from .utils.allure_wrappers import take_screenshot
-
-URL = "http://localhost:1667/"
+from .utils.constants import URL
 
 
 @pytest.mark.parametrize(

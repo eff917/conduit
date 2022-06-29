@@ -11,8 +11,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from .utils.fixtures import driver
 from .utils.allure_wrappers import take_screenshot
+from .utils.constants import URL
 
-URL = "http://localhost:1667/"
 
 def test_wait_for_main_page_load(driver):
     """
@@ -37,5 +37,3 @@ def test_wait_for_main_page_load(driver):
             except TimeoutException:
                 driver.refresh()
                 i += 1
-
-
