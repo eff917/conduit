@@ -47,6 +47,22 @@ def create_user(driver):
     yield
 
 @pytest.fixture()
+def login_driver(driver):
+    driver.get(URL)
+    login_link = driver.find_element_by_xpath('//a[@href="#/login"]')
+    login_link.click()
+    login_email_field = driver.find_element_by_xpath('//input[@placeholder="Email"]')
+    login_password_field = driver.find_element_by_xpath('//input[@placeholder="Password"]')
+    login_button = driver.find_element_by_xpath('//button[contains(text(), "Sign in")]')
+    login_email_field.send_keys('testuser1@mailinator.com')
+    login_password_field.send_keys('TestUserPass1')
+    login_button.click()
+    # sleep one second to wait for animation to end
+    sleep(1)
+    # pass control to test
+    yield driver
+
+@pytest.fixture()
 def login_logout_driver(driver):
     driver.get(URL)
     login_link = driver.find_element_by_xpath('//a[@href="#/login"]')
@@ -59,6 +75,15 @@ def login_logout_driver(driver):
     login_button.click()
     # sleep one second to wait for animation to end
     sleep(1)
+    # pass control to test
+    yield driver
+    # logout after test
+    logout_link = driver.find_element_by_xpath('//a[@active-class="active"]')
+    logout_link.click()
+
+@pytest.fixture()
+def logout_driver(driver):
+    driver.get(URL)
     # pass control to test
     yield driver
     # logout after test

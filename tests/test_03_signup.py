@@ -5,7 +5,7 @@ Test conduit app signup
 from time import sleep
 import allure
 import pytest
-from .utils.fixtures import driver
+from .utils.fixtures import driver, logout_driver
 from .utils.allure_wrappers import take_screenshot
 
 URL = "http://localhost:1667/"
@@ -72,7 +72,7 @@ def test_invalid_signup(driver, username, email, password, expected_message):
         ),
     ],
 )
-def test_valid_signup(driver, username, email, password, expected_message):
+def test_valid_signup(driver, logout_driver, username, email, password, expected_message):
     """
     Signup test
     """
@@ -99,7 +99,8 @@ def test_valid_signup(driver, username, email, password, expected_message):
         signup_password_field.send_keys(password)
         take_screenshot(driver, "signup_page_after_fill")
         signup_button.click()
-        sleep(1)
+        sleep(2)
         take_screenshot(driver, "after_signup")
         error_message = driver.find_element_by_xpath('//div[@class="swal-text"]')
         assert error_message.text == expected_message
+
