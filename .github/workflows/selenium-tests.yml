@@ -3,6 +3,7 @@ on:
   push:
     branches-ignore:
       - 'gh-pages'
+      - 'tweak-pytest'
 
 jobs:
   conduit-selenium-test:
