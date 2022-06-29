@@ -1,4 +1,6 @@
 from time import sleep
+
+import pytest
 from .utils.fixtures import driver
 from .utils.allure_wrappers import take_screenshot
 
@@ -21,29 +23,23 @@ def test_learn_more_link(driver):
 
     assert 'What are cookies? | Cookies & You' in tab_titles
 
-def test_decline_cookie_policy(driver):
+@pytest.mark.parametrize(
+    "element_xpath, cookie_value",
+    [
+        ('//div[contains(text(), "I decline!")]', 'decline'),
+        ('//div[contains(text(), "I accept!")]', 'accept'),
+    ]
+)
+def test_cookie_policy(driver, element_xpath, cookie_value):
     """
     Test decline button on cookie policy bar
     """
     driver.delete_all_cookies()
     driver.get(URL)
-    decline_button = driver.find_element_by_xpath('//div[contains(text(), "I decline!")]')
-    decline_button.click()
+    button = driver.find_element_by_xpath(element_xpath)
+    button.click()
     for cookie in driver.get_cookies():
         if cookie["name"] == 'vue-cookie-accept-decline-cookie-policy-panel':
             policy_accepted = cookie['value']
-    assert policy_accepted == 'decline'
+    assert policy_accepted == cookie_value
 
-def test_accept_cookie_policy(driver):
-    """
-    Test accept button on cookie policy bar
-    """
-    driver.delete_all_cookies()
-    driver.get(URL)
-    accept_button = driver.find_element_by_xpath('//div[contains(text(), "I accept!")]')
-    accept_button.click()
-    policy_accepted = ''
-    for cookie in driver.get_cookies():
-        if cookie["name"] == 'vue-cookie-accept-decline-cookie-policy-panel':
-            policy_accepted = cookie['value']
-    assert policy_accepted == 'accept'

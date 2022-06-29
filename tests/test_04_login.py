@@ -5,7 +5,7 @@ Test conduit app login
 from time import sleep
 import allure
 import pytest
-from .utils.fixtures import driver
+from .utils.fixtures import create_user, driver
 from .utils.allure_wrappers import take_screenshot
 
 URL = "http://localhost:1667/"
@@ -51,5 +51,6 @@ def test_invalid_login(driver, email, password, expected_message):
         error_message = driver.find_element_by_xpath('//div[@class="swal-text"]')
         assert error_message.text == expected_message
 
+@pytest.mark.skip(driver, create_user)
 def test_valid_login(driver):
     assert True
