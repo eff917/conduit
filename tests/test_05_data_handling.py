@@ -1,5 +1,7 @@
+from time import sleep
 import pytest
-from .utils.fixtures import driver
+from .utils.fixtures import driver, login_logout_driver
+from .utils.allure_wrappers import take_screenshot
 #test_05_list_data.py
 #test_06_multi_page_list.py
 #test_07_new_data.py
@@ -8,9 +10,14 @@ from .utils.fixtures import driver
 #test_10_download_data.py
 #test_11_delete_data.py
 
-@pytest.mark.skip()
-def test_list_data(driver):
-    assert True
+def test_list_data(login_logout_driver):
+    lorem_tag = login_logout_driver.find_element_by_xpath(
+            '//div[@class="sidebar"]/div[@class="tag-list"]/a[text()="lorem"]')
+    lorem_tag.click()
+    sleep(2)
+    take_screenshot(login_logout_driver, 'list_articles_after_login')
+    article_list = login_logout_driver.find_elements_by_xpath('//a[@class="preview-link"]/h1')
+    assert len(article_list) != 0
 
 @pytest.mark.skip()
 def test_list_multi_page_data(driver):
