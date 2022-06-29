@@ -80,6 +80,7 @@ def test_valid_signup(driver, username, email, password, expected_message):
         driver.get(URL)
         signup_link = driver.find_element_by_xpath('//a[@href="#/register"]')
         signup_link.click()
+        sleep(1)
         take_screenshot(driver, "signup_page")
         signup_username_field = driver.find_element_by_xpath(
             '//input[@placeholder="Username"]'
@@ -109,5 +110,7 @@ def test_valid_signup(driver, username, email, password, expected_message):
             ok_link.click()
             logout_link = driver.find_element_by_xpath('//a[@active-class="active"]')
             logout_link.click()
+            sleep(1)
+            take_screenshot(driver, 'after_logout')
 
 

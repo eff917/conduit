@@ -66,6 +66,7 @@ def test_valid_login(driver, create_user, email, password, expected_element, exp
         driver.get(URL)
         login_link = driver.find_element_by_xpath('//a[@href="#/login"]')
         login_link.click()
+        sleep(1)
         take_screenshot(driver, "login_page")
         login_email_field = driver.find_element_by_xpath('//input[@placeholder="Email"]')
         login_password_field = driver.find_element_by_xpath('//input[@placeholder="Password"]')

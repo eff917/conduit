@@ -16,7 +16,7 @@ pylint = "^2.13.9"
 testpaths = [
     "tests"
     ]
-addopts = "--alluredir=allure-results"
+addopts = "-v --alluredir=allure-results"
 
 [tool.poetry.dev-dependencies]
 black = {version = "^22.3.0", allow-prereleases = true}

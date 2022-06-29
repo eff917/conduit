@@ -43,6 +43,11 @@ def create_user(driver):
     signup_email_field.send_keys("testuser1@mailinator.com")
     signup_password_field.send_keys("TestUserPass1")
     signup_button.click()
+    sleep(2)
+    ok_link = driver.find_element_by_xpath('//button[@class="swal-button swal-button--confirm"]')
+    ok_link.click()
+    logout_link = driver.find_element_by_xpath('//a[@active-class="active"]')
+    logout_link.click()
     sleep(1)
     yield
 
