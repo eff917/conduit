@@ -1,5 +1,8 @@
 from time import sleep
 import pytest
+import allure
+from allure_commons.types import AttachmentType
+
 from .utils.fixtures import driver, login_logout_driver
 from .utils.allure_wrappers import take_screenshot
 #test_05_list_data.py
@@ -88,6 +91,12 @@ def test_download_data(login_logout_driver):
     with open('article_titles.txt', 'r', encoding='utf8') as infile:
         for index, line in enumerate(infile):
             assert line.rstrip("\n") == titles[index]
+
+    allure.attach.file(
+        "article_titles.txt",
+        name="article_titles.txt",
+        attachment_type=AttachmentType.TEXT,
+    )
     
 
 def test_delete_data(login_logout_driver):
