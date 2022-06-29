@@ -9,14 +9,15 @@ chrome_options = Options()
 chrome_options.add_argument("--headless")
 chrome_options.add_argument(f"--window-size={WINDOW_SIZE}")
 
+
 @pytest.fixture()
 def driver():
-        driver = webdriver.Chrome(
-            ChromeDriverManager().install(), options=chrome_options
-        )
+    driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
+    # pass driver to calling test
+    yield driver
+    # quit after test finished
+    driver.quit()
 
-        yield driver
-        driver.quit()
 
 @pytest.fixture()
 def create_user(driver):
