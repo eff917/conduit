@@ -50,6 +50,7 @@ def create_user(driver):
     logout_link.click()
     sleep(1)
     yield
+    # deleting the user should come here, but there's no such option in Conduit
 
 @pytest.fixture()
 def login_driver(driver):

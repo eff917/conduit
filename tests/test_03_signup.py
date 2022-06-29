@@ -100,17 +100,17 @@ def test_valid_signup(driver, username, email, password, expected_message):
         signup_password_field.send_keys(password)
         take_screenshot(driver, "signup_page_after_fill")
         signup_button.click()
-        sleep(2)
+        sleep(5)
         take_screenshot(driver, "after_signup")
         signup_message = driver.find_element_by_xpath('//div[@class="swal-text"]')
         try:
             assert signup_message.text == expected_message
         finally:
-            ok_link = driver.find_element_by_xpath('//button[@class="swal-button swal-button--confirm"]')
+            ok_link = driver.find_element_by_xpath(
+                '//button[@class="swal-button swal-button--confirm"]'
+            )
             ok_link.click()
             logout_link = driver.find_element_by_xpath('//a[@active-class="active"]')
             logout_link.click()
             sleep(1)
-            take_screenshot(driver, 'after_logout')
-
-
+            take_screenshot(driver, "after_logout")
