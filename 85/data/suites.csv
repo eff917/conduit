@@ -1,0 +1,60 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed Jun 29 18:10:04 GMT 2022","Wed Jun 29 18:10:13 GMT 2022","8262","tests","test_03_signup","","","","test_valid_signup[testuser0-testuser0@mailinator.com-TestUserPass0-Your registration was successful!]","
+    Signup test
+    "
+"passed","Wed Jun 29 18:10:42 GMT 2022","Wed Jun 29 18:10:44 GMT 2022","2197","tests","test_05_data_handling","","","","test_list_data",""
+"passed","Wed Jun 29 18:09:55 GMT 2022","Wed Jun 29 18:09:57 GMT 2022","2025","tests","test_03_signup","","","","test_invalid_signup[Empty email]","
+    Signup test
+    "
+"passed","Wed Jun 29 18:10:37 GMT 2022","Wed Jun 29 18:10:40 GMT 2022","2829","tests","test_04_login","","","","test_valid_login[testuser1@mailinator.com-TestUserPass1-//a[@href=""#/@testuser1/""]-testuser1]","
+    Test valid login
+    "
+"passed","Wed Jun 29 18:11:21 GMT 2022","Wed Jun 29 18:11:33 GMT 2022","12066","tests","test_05_data_handling","","","","test_bulk_insert_data_from_file",""
+"passed","Wed Jun 29 18:10:54 GMT 2022","Wed Jun 29 18:10:59 GMT 2022","4905","tests","test_05_data_handling","","","","test_insert_data",""
+"passed","Wed Jun 29 18:10:01 GMT 2022","Wed Jun 29 18:10:03 GMT 2022","1960","tests","test_03_signup","","","","test_invalid_signup[All fields empty]","
+    Signup test
+    "
+"passed","Wed Jun 29 18:09:43 GMT 2022","Wed Jun 29 18:09:44 GMT 2022","1316","tests","test_02_cookie_policy","","","","test_learn_more_link","
+    Test Learn more... link on cookie policy bar
+    "
+"passed","Wed Jun 29 18:10:14 GMT 2022","Wed Jun 29 18:10:16 GMT 2022","1961","tests","test_04_login","","","","test_invalid_login[Empty fields]","
+    Test invalid login
+    "
+"passed","Wed Jun 29 18:10:30 GMT 2022","Wed Jun 29 18:10:32 GMT 2022","1995","tests","test_04_login","","","","test_invalid_login[Not registered email]","
+    Test invalid login
+    "
+"passed","Wed Jun 29 18:10:47 GMT 2022","Wed Jun 29 18:10:51 GMT 2022","4160","tests","test_05_data_handling","","","","test_list_multi_page_data",""
+"passed","Wed Jun 29 18:10:17 GMT 2022","Wed Jun 29 18:10:19 GMT 2022","1910","tests","test_04_login","","","","test_invalid_login[Empty email]","
+    Test invalid login
+    "
+"passed","Wed Jun 29 18:10:27 GMT 2022","Wed Jun 29 18:10:29 GMT 2022","1958","tests","test_04_login","","","","test_invalid_login[Invalid email format]","
+    Test invalid login
+    "
+"passed","Wed Jun 29 18:09:35 GMT 2022","Wed Jun 29 18:09:41 GMT 2022","5764","tests","test_01_main_page","","","","test_wait_for_main_page_load","
+    Wait for docker container to load
+    "
+"passed","Wed Jun 29 18:09:48 GMT 2022","Wed Jun 29 18:09:50 GMT 2022","2022","tests","test_03_signup","","","","test_invalid_signup[Invalid email format]","
+    Signup test
+    "
+"passed","Wed Jun 29 18:09:47 GMT 2022","Wed Jun 29 18:09:47 GMT 2022","325","tests","test_02_cookie_policy","","","","test_cookie_policy[//div[contains(text(), ""I accept!"")]-accept]","
+    Test decline button on cookie policy bar
+    "
+"passed","Wed Jun 29 18:09:51 GMT 2022","Wed Jun 29 18:09:53 GMT 2022","1979","tests","test_03_signup","","","","test_invalid_signup[Empty username]","
+    Signup test
+    "
+"passed","Wed Jun 29 18:10:23 GMT 2022","Wed Jun 29 18:10:25 GMT 2022","1953","tests","test_04_login","","","","test_invalid_login[Invalid password]","
+    Test invalid login
+    "
+"passed","Wed Jun 29 18:09:45 GMT 2022","Wed Jun 29 18:09:45 GMT 2022","320","tests","test_02_cookie_policy","","","","test_cookie_policy[//div[contains(text(), ""I decline!"")]-decline]","
+    Test decline button on cookie policy bar
+    "
+"passed","Wed Jun 29 18:11:36 GMT 2022","Wed Jun 29 18:11:37 GMT 2022","1557","tests","test_06_logout","","","","test_logout",""
+"passed","Wed Jun 29 18:10:20 GMT 2022","Wed Jun 29 18:10:22 GMT 2022","1980","tests","test_04_login","","","","test_invalid_login[Empty password]","
+    Test invalid login
+    "
+"passed","Wed Jun 29 18:11:11 GMT 2022","Wed Jun 29 18:11:11 GMT 2022","152","tests","test_05_data_handling","","","","test_download_data",""
+"passed","Wed Jun 29 18:09:58 GMT 2022","Wed Jun 29 18:10:00 GMT 2022","1975","tests","test_03_signup","","","","test_invalid_signup[Empty password]","
+    Signup test
+    "
+"passed","Wed Jun 29 18:11:02 GMT 2022","Wed Jun 29 18:11:08 GMT 2022","6206","tests","test_05_data_handling","","","","test_update_data",""
+"passed","Wed Jun 29 18:11:14 GMT 2022","Wed Jun 29 18:11:18 GMT 2022","4192","tests","test_05_data_handling","","","","test_delete_data",""
