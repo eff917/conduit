@@ -1,5 +1,4 @@
 from time import sleep
-from turtle import title
 import pytest
 from .utils.fixtures import driver, login_logout_driver
 from .utils.allure_wrappers import take_screenshot
@@ -78,9 +77,18 @@ def test_update_data(login_logout_driver):
     assert actual_title.text == "Test Article Modified"
 
 
-@pytest.mark.skip()
 def test_download_data(login_logout_driver):
-    assert True
+    title_list = login_logout_driver.find_elements_by_xpath('//h1')
+    titles = []
+    for a_title in title_list:
+        titles.append(a_title.text)
+    with open('article_titles.txt', 'w', encoding='utf8') as outfile:
+            for a_title in titles:
+                outfile.write(f"{a_title}\n")
+    with open('article_titles.txt', 'r', encoding='utf8') as infile:
+        for index, line in enumerate(infile):
+            assert line.rstrip("\n") == titles[index]
+    
 
 def test_delete_data(login_logout_driver):
     login_logout_driver.get(URL + '#/articles/test-article')
