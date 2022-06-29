@@ -1,4 +1,0 @@
-INFO     WDM:logger.py:16 ====== WebDriver manager ======
-INFO     WDM:logger.py:16 Current google-chrome version is 102.0.5005
-INFO     WDM:logger.py:16 Get LATEST chromedriver version for 102.0.5005 google-chrome
-INFO     WDM:logger.py:16 Driver [/home/runner/.wdm/drivers/chromedriver/linux64/102.0.5005.61/chromedriver] found in cache
