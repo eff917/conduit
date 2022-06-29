@@ -72,7 +72,7 @@ def test_invalid_signup(driver, username, email, password, expected_message):
         ),
     ],
 )
-def test_valid_signup(driver, logout_driver, username, email, password, expected_message):
+def test_valid_signup(driver, username, email, password, expected_message):
     """
     Signup test
     """
@@ -102,5 +102,10 @@ def test_valid_signup(driver, logout_driver, username, email, password, expected
         sleep(2)
         take_screenshot(driver, "after_signup")
         error_message = driver.find_element_by_xpath('//div[@class="swal-text"]')
-        assert error_message.text == expected_message
+        try:
+            assert error_message.text == expected_message
+        finally:
+            logout_link = driver.find_element_by_xpath('//a[@active-class="active"]')
+            logout_link.click()
+
 

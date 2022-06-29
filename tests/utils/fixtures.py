@@ -81,11 +81,3 @@ def login_logout_driver(driver):
     logout_link = driver.find_element_by_xpath('//a[@active-class="active"]')
     logout_link.click()
 
-@pytest.fixture()
-def logout_driver(driver):
-    driver.get(URL)
-    # pass control to test
-    yield driver
-    # logout after test
-    logout_link = driver.find_element_by_xpath('//a[@active-class="active"]')
-    logout_link.click()
