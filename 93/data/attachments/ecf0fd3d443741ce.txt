@@ -1,0 +1,4 @@
+[WDM] - ====== WebDriver manager ======
+[WDM] - Current google-chrome version is 104.0.5112
+[WDM] - Get LATEST chromedriver version for 104.0.5112 google-chrome
+[WDM] - Driver [/home/runner/.wdm/drivers/chromedriver/linux64/104.0.5112.79/chromedriver] found in cache
