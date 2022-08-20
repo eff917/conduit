@@ -1,6 +1,7 @@
 """
 Test main page with selenium
 """
+
 import allure
 import pytest
 import time
